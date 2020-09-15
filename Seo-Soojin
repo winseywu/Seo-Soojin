@@ -1,0 +1,571 @@
+function setup() {
+  createCanvas(x, y);
+    
+}
+
+function draw() {
+  
+  Background();
+  
+  //我的老婆啊啊啊，对不起了
+  
+  hairLeft();
+  hairRight();
+  
+  neck();
+  ear();
+  head();
+  neckShadow();
+  
+  鬓发();
+  hairBangs();
+  hairBack();
+  //faceProportion();
+   
+  shoulderRight();
+  armRight();
+  handRight();
+  handLeft();
+  
+  stroke(1);
+  strokeWeight(3);
+  
+  point(x/2.1, y/3.9)
+}
+
+
+function Background(){
+
+  noStroke();
+  fill(255,0,0);
+  triangle(0,0, x,y, x,0)
+
+  fill(0);
+  triangle(0,0, 0,y, x,y)
+}
+  var x=400;
+  var y=400;
+
+//skin color
+  var skinRed = 244
+  var skinGreen = 128
+  var skinBlue = 0
+
+//hair color
+  var hairRed = 38
+  var hairGreen = 38
+  var hairBlue = 38
+  
+  
+function head() {
+  
+  noStroke();
+   
+  fill(skinRed+6,skinGreen+74,skinBlue+180);
+  
+   ellipse(x/2,y/5.5, x/3.4,y/3.3);
+  
+   ellipse(x/2,y/3.9, x/3.5,y/2.7);
+  
+
+}
+
+function hairBangs(){
+  
+  noStroke();
+  
+  fill(hairRed,hairGreen,hairBlue);
+  
+//Guide
+  
+  //stroke(1);
+  //strokeWeight(5);
+  
+  //point(x/2.9,y/4.9);
+  //point(x/3,y/5);
+  //point(x/3.07,y/5.5);
+  //point(x/3.1,y/6);
+  //point(x/3.15,y/7);
+  //point(x/3.15,y/8.5);
+  //point(x/3.05,y/11); 
+  //point(x/2.9,y/15);
+  //point(x/2.5,y/35);
+  //point(x/2.25,6.5);
+  //point(x/2,5);
+  //point(x/1.8,6.5);
+  //point(x/1.6,y/30);
+  //point(x/1.45, y/10);
+  //point(x/1.4, y/5.5);
+  //point(x/1.4, y/5);
+  
+  //strokeWeight(1);
+  
+  //line(x/3,y/5, 1.85*x/3,y/5.5);  
+  
+  beginShape()
+  
+    curveVertex(x/2.9, y/4.9);
+    curveVertex(x/3, y/5);
+    //curveVertex(x/3.07,y/5.5);
+    curveVertex(x/3.1, y/6);
+    curveVertex(x/3.15, y/7);
+    curveVertex(x/3.15, y/8.5);
+    curveVertex(x/3.05, y/11);
+    curveVertex(x/2.9, y/15);
+    curveVertex(x/2.5, y/35);
+    curveVertex(x/2.25, 6.5);
+    curveVertex(x/2, 5);
+    curveVertex(x/1.8, 6.5);
+    curveVertex(x/1.6, y/30);
+  
+    curveVertex(x/1.45, y/10);
+
+    curveVertex(x/1.4, y/5.5);
+
+    curveVertex(x/1.4, y/5);
+  
+  endShape()
+  
+}
+
+
+function neck(){
+
+  fill(skinRed+6,skinGreen+74,skinBlue+180);
+  noStroke()
+  
+  //Guide
+  
+  //stroke(1);
+  //strokeWeight(5);
+  
+  //point(x/2.1,y/2.25);
+  //point(x/2,y/2);
+  //point(x/1.5,y/2.25);
+  //point(x/1.55,y/3);
+  
+  
+  beginShape()
+  
+    vertex(x/2.1,y/2.35);
+    vertex(x/2,y/2);
+    vertex(x/1.5,y/2.5);
+    vertex(x/1.55,y/4);
+  
+  endShape()
+  
+
+  beginShape()
+  
+    vertex(x/2,y/2.);
+    vertex(x/1.5,y/2.51);
+    vertex(x/1.45,y/2);
+    vertex(x/2.2,y/1.85);
+    
+  endShape()
+  
+  
+}
+
+function neckShadow(){
+
+   
+  //Guide
+    // jaws
+  //stroke(1);
+  //strokeWeight(5);
+  
+  //point(x/2.2,y/2.3);
+  //point(x/2.1,y/2.25);
+  //point(x/1.9,y/2.3);
+  //point(x/1.8,y/2.4);
+  //point(x/1.7,y/2.55);
+  //point(x/1.6,y/2.8);
+  //point(x/1.6,y/2.9);
+  //point(x/1.55,y/3);
+  
+    //neck top
+  //point(x/2.1,y/2.25);
+  //point(x/2,y/2);
+  //point(x/1.9,y/2);  
+  //point(x/1.5,y/2.6);
+  //point(x/1.51,y/2.89);
+  
+  fill(skinRed+2,skinGreen+34,skinBlue+114);
+
+  triangle(x/1.61,y/2.8, x/1.54,y/3.5,x/1.52,y/2.9);
+  
+  beginShape()
+  
+    vertex(x/2.07,y/2.26);
+    vertex(x/2,y/2);
+    vertex(x/1.9,y/2);  
+    vertex(x/1.504,y/2.6);
+    vertex(x/1.52,y/2.99);
+  
+  endShape()
+  
+  
+  fill(skinRed+1,skinGreen+18,skinBlue+81); 
+  
+  beginShape()
+  
+    curveVertex(x/2.2,y/2.3);
+    curveVertex(x/2.09,y/2.26);
+    curveVertex(x/1.9,y/2.3);
+    curveVertex(x/1.8,y/2.4);
+    curveVertex(x/1.7,y/2.55);
+    curveVertex(x/1.6,y/2.8);
+    curveVertex(x/1.6,y/2.9);
+    curveVertex(x/1.55,y/3);
+  
+  endShape()
+  
+
+}
+
+function shoulderRight(){
+  
+  fill(0);
+  ellipse(x/1.159,y/1.65,0.12*x,0.12*y);
+  
+  
+   //Guide
+  
+  //stroke(1);
+  //strokeWeight(5);
+    
+  //point(x/1.45,y/2);
+    //point(x/1.6,y/1.95);
+    //point(x/1.5,y/2.2);
+
+  //point(x/1.3,y/1.9);
+  //point(x/1.15,y/1.82);
+  //point(x/1.082,y/1.65);
+  //point(x/1.2,y/1.1);
+
+  beginShape()
+  
+  vertex(x/1.9,y/1.89);
+  vertex(x/1.45,y/2);
+  vertex(x/1.3,y/1.9);
+  vertex(x/1.15,y/1.82);
+  vertex(x/1.082,y/1.65);
+  vertex(x/1.19,y);
+  
+  endShape()
+  
+  triangle(x/1.45,y/2, x/1.6,y/1.95, x/1.5,y/2.2);
+}  
+
+function armRight(){
+
+  fill(skinRed+6,skinGreen+78,skinBlue+180);
+  ellipse(x/1.16,y/1.64,0.12*x,0.12*y);
+
+  //Guide
+  
+  //stroke(1);
+  //strokeWeight(5);
+
+  //point(x/1.24,y/1.65);
+  //point(x/1.082,y/1.65);
+  //point(x/1.12,y/1.35);
+  //point(x/1.26,y/1.38);
+
+  beginShape()
+  
+    vertex(x/1.24,y/1.65);
+    vertex(x/1.082,y/1.65);  
+    vertex(x/1.12,y/1.35);
+    vertex(x/1.26,y/1.38);
+
+  endShape()
+
+}
+
+function handRight(){
+
+//Guide
+  
+  //stroke(1);
+  //strokeWeight(5);
+  
+  //point(x/4.5,y/1.65);
+  //point(x/3.3,y/1.65);
+  //point(x/3.2,y/1.35);
+  //point(x/4,y/1.3);
+  
+  //point(x/4.5,y/1.65);
+  //point(x/3.3,y/1.65);
+  //point(x/4,y/2);
+  //point(x/6,y/2);
+  
+  //point(x/4,y/1.25);
+  //point(x/4,y/1.3);
+  //point(x/3.88,y/1.34);
+  //point(x/3.65,y/1.38);
+  //point(x/3.4,y/1.4);
+  //point(x/3.21,y/1.41);
+  //point(x/3.2,y/1.35);
+  //point(x/3.2,y/1.3);
+  
+  beginShape()
+  
+  vertex(x/4.5,y/1.65);
+  vertex(x/3.3,y/1.65);  
+  vertex(x/3.2,y/1.35);
+  vertex(x/4,y/1.3);
+  
+  endShape()
+  
+  //fingers
+  
+  beginShape()
+  
+  vertex(x/4.5,y/1.65);
+  vertex(x/3.3,y/1.65);  
+  vertex(x/4,y/2);
+  vertex(x/6,y/2);
+  
+  endShape()  
+  
+  fill(0);
+  
+  beginShape()
+  
+  vertex(x/4,y/1.25);
+  vertex(x/4,y/1.3);
+  vertex(x/3.88,y/1.34);
+  vertex(x/3.65,y/1.38);
+  vertex(x/3.4,y/1.4);
+  vertex(x/3.21,y/1.41);
+  vertex(x/3.2,y/1.35);
+  vertex(x/3.2,y/1.3);
+  
+  endShape()
+  
+}
+
+function handLeft(){
+  
+  fill(skinRed+6,skinGreen+78,skinBlue+180);
+  
+  //Guide
+  
+  //stroke(1);
+  //strokeWeight(5);
+  
+  //point(x/6,y/2.);
+  //point(x/3.3,y/2.4);
+  //point(x/3.5,y/1.9);
+  //point(x/6,y/1.8);
+  
+  //point(x/2.5,y/2.2);  
+  //point(x/3.3,y/2.4);
+  //point(x/3.5,y/1.9);
+  //point(x/3,y/2);
+  //point(x/2.7,y/1.9);
+  //point(x/2.4,y/1.8);
+  //point(x/2.3,y/1.9);
+  //point(x/2.3,y/2);
+
+  //point(x/6,y/2.);
+  //point(x/6,y/1.8);
+  //point(x/3.79,y/1.87);
+  //point(x/3.9,y/1.95);
+  //point(x/4,y/2.03);
+  //point(x/4.3,y/2.1);
+  //point(x/4.75,y/2.1);
+  
+  beginShape()
+  
+  vertex(x/6,y/2.);
+  vertex(x/3.3,y/2.4);
+  vertex(x/3.5,y/1.9);
+  vertex(x/6,y/1.8);
+  
+  endShape()
+    
+  beginShape()
+  
+  vertex(x/2.5,y/2.2);  
+  vertex(x/3.31,y/2.4);
+  vertex(x/3.51,y/1.9);
+  vertex(x/3,y/2);
+  vertex(x/2.7,y/1.9);
+  vertex(x/2.4,y/1.8);
+  vertex(x/2.3,y/1.9);
+  vertex(x/2.3,y/2);
+
+  endShape()
+  
+  fill(0);
+  
+  beginShape()
+  
+  vertex(x/6,y/2.);
+  vertex(x/6,y/1.8);
+  vertex(x/3.79,y/1.87);
+  vertex(x/3.9,y/1.95);
+  vertex(x/4,y/2.03);
+  vertex(x/4.3,y/2.1);
+  vertex(x/4.75,y/2.1);
+  
+  endShape()  
+  
+}
+
+function ear(){
+
+  //Guide
+  
+  //stroke(1);
+  //strokeWeight(5);
+  
+  //point(x/1.56,y/4);
+  //point(x/1.55,y/4.5);
+  //point(x/1.53,y/5);
+  //point(x/1.5,y/5.2);
+  //point(x/1.48,y/5);
+  //point(x/1.46,y/4.5);
+  //point(x/1.47,y/3.9);
+  //point(x/1.5,y/3.7);
+  //point(x/1.56,y/3.5);
+  //point(x/1.56,y/3.25);
+
+  
+  beginShape()
+  
+  curveVertex(x/1.56,y/4);
+  curveVertex(x/1.55,y/4.5);
+  curveVertex(x/1.53,y/5);
+  curveVertex(x/1.5,y/5.2);
+  curveVertex(x/1.48,y/5);
+  curveVertex(x/1.46,y/4.5);
+  curveVertex(x/1.47,y/3.9);
+  curveVertex(x/1.5,y/3.7);
+  curveVertex(x/1.56,y/3.5);
+  curveVertex(x/1.56,y/3.25);
+
+  endShape()
+
+}
+
+function 鬓发(){
+
+  fill(hairRed,hairGreen,hairBlue);
+
+  //Guide
+  
+  //stroke(1); 
+  //strokeWeight(5);
+  
+  //point(x/1.7, y/5.5);
+  //point(x/1.68, y/5.4);
+  //point(x/1.65, y/5);
+  //point(x/1.59, y/4.5);
+  //point(x/1.56,y/4);
+  //point(x/1.55,y/4.5);
+  //point(x/1.53,y/5);
+  //point(x/1.5,y/5.2);
+  //point(x/1.48,y/5.5);
+  //point(x/1.45,y/5.6);
+  
+  beginShape()
+  
+    curveVertex(x/1.7, y/5.5);
+    curveVertex(x/1.68, y/5.4);
+    curveVertex(x/1.65, y/5);
+    curveVertex(x/1.59, y/4.5);
+    curveVertex(x/1.56,y/4);
+    curveVertex(x/1.55,y/4.5);
+    curveVertex(x/1.53,y/5);
+    curveVertex(x/1.5,y/5.2);
+    curveVertex(x/1.48,y/5.5);
+    curveVertex(x/1.45,y/5.6);
+ 
+  endShape()
+
+}
+
+function hairLeft(){
+
+ fill(0);
+  
+  ellipse(x*.38, y*.28, .18*x, 2*y/5)
+
+  rectMode(CENTER);
+  
+  rect(.399*x,.38*y, x/4.9, y/3.4)
+  
+}
+
+function hairRight(){
+ 
+  fill(hairRed,hairGreen,hairBlue);
+  
+  ellipse(x*.64, y*.28, .18*x, 2*y/5)
+
+  rectMode(CENTER);
+  
+  rect(.63*x,.38*y, x/5.1, y/3.4)
+}
+
+function hairBack(){
+
+  //Guide
+  
+  //stroke(1); 
+  //strokeWeight(5);
+  
+  //point(x/1.5,y/3);
+  //point(x/1.5,y/2.8);  
+  //point(x/1.51,y/2.65);
+  //point(x/1.53,y/2.5);
+  //point(x/1.53,y/2.3);
+  //point(x/1.51,y/2.2);
+  //point(x/1.49,y/2.1);
+  //point(x/1.47,y/2);
+  //point(x/1.45,y/1.95);
+  //point(x/1.4,y/1.9);
+  //point(x/1.38,y/1.9);
+  //point(x/1.39, y/3);
+  //point(x/1.28, y/1.9);
+  //point(x/1.4, y/1.9);
+  
+    beginShape()
+  
+    curveVertex(x/1.5,y/3);
+    curveVertex(x/1.5,y/2.9);  
+    curveVertex(x/1.51,y/2.65);
+    curveVertex(x/1.53,y/2.5);
+    curveVertex(x/1.53,y/2.3);
+    curveVertex(x/1.51,y/2.2);
+    curveVertex(x/1.49,y/2.1);
+    curveVertex(x/1.47,y/2);
+    curveVertex(x/1.45,y/1.95);
+    curveVertex(x/1.4,y/1.9);
+    curveVertex(x/1.38,y/1.9);
+  
+  endShape()
+  
+  triangle(x/1.39, y/3,x/1.28, y/1.8,x/1.4, y/1.9 );
+  
+  
+}
+
+
+function faceProportion(){
+  
+  stroke(1);
+
+  line(x/3,y/4.3, 2*x/3,y/4.5);
+  
+  line(x/3,y/3.25, 2*x/3,y/3.4);
+  
+  line(x/3,y/2.65, 2*x/3,y/2.75);
+  
+  line(x/2.5,y/5, x/2.2,220);
+
+}
